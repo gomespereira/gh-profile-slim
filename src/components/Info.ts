@@ -2,10 +2,13 @@ import { useState, useEffect } from 'preact/hooks'
 import { useRouter } from 'wouter/preact'
 import { html } from 'htm/preact'
 
+import { formatter } from '../utils/utils'
+
 export default function Info() {
   const [info, setInfo] = useState<any>({})
   const router = useRouter()
   const username = router.state
+  const formattedDate = formatter(info.created_at)
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`, {
@@ -19,16 +22,18 @@ export default function Info() {
   }, [])
 
   return html`
-    <section>
+    <section class="flex flex-col items-center space-y-4">
       <picture>
         <img
+          class="w-32 rounded-full"
           src=${info.avatar_url}
           alt="Avatar"
         />
       </picture>
-      <div>
-        <span>${info.name}</span>
+      <div class="flex flex-col items-center">
+        <span class="font-bold">${info.name}</span>
         <a
+          class="text-teal-700 hover:underline"
           href=${info.html_url}
           target="_blank"
           rel="noopener noreferrer"
@@ -36,13 +41,13 @@ export default function Info() {
           @${info.login}
         </a>
       </div>
-      <div>
+      <div class="flex flex-col items-center">
         <span>${info.location}</span>
-        <span>Joined in ${info.created_at}</span>
+        <span>Joined in ${formattedDate}</span>
       </div>
-      <div>
-        <div>
-          <span>${info.public_repos}</span>
+      <div class="flex space-x-5">
+        <div class="flex flex-col items-center">
+          <span class="font-bold">${info.public_repos}</span>
           <span>
             ${
               info.public_repos === 1
@@ -51,8 +56,8 @@ export default function Info() {
             }
           </span>
         </div>
-        <div>
-          <span>${info.followers}</span>
+        <div class="flex flex-col items-center">
+          <span class="font-bold">${info.followers}</span>
           <span>
             ${
               info.followers === 1
@@ -61,8 +66,8 @@ export default function Info() {
             }
           </span>
         </div>
-        <div>
-          <span>${info.following}</span>
+        <div class="flex flex-col items-center">
+          <span class="font-bold">${info.following}</span>
           <span>Following</span>
         </div>
       </div>
