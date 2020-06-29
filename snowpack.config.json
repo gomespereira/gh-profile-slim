@@ -2,6 +2,7 @@
   "extends": "@snowpack/app-scripts-preact",
   "scripts": {},
   "plugins": [
-    "@snowpack/plugin-babel"
+    "@snowpack/plugin-babel",
+    "@snowpack/plugin-dotenv"
   ]
 }

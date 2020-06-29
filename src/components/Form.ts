@@ -1,10 +1,11 @@
 import { html } from 'htm/preact'
 import { useState } from 'preact/hooks'
-import { useLocation } from 'wouter/preact'
+import { useLocation, useRouter } from 'wouter/preact'
 
 export default function Form() {
   const [username, setUsername] = useState('')
   const [, setLocation] = useLocation()
+  const router = useRouter()
 
   function handleChange(event: any) {
     setUsername(event.target.value)
@@ -13,6 +14,7 @@ export default function Form() {
   function handleSubmit(event: any) {
     event.preventDefault()
     setLocation('/profile')
+    router.state = username
   }
 
   return html`

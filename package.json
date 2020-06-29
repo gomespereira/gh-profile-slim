@@ -14,6 +14,7 @@
   "devDependencies": {
     "@snowpack/app-scripts-preact": "^1.4.0",
     "@snowpack/plugin-babel": "^1.4.0",
+    "@snowpack/plugin-dotenv": "^1.1.1",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/preact": "^1.0.2",
     "jest": "^25.4.0",
