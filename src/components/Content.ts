@@ -1,5 +1,5 @@
 import { html } from 'htm/preact'
-import { Switch, Route } from 'wouter/preact'
+import { Switch, Route } from 'wouter-preact'
 
 import Home from '../pages/Home'
 import About from '../pages/About'

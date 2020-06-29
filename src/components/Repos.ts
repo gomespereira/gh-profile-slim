@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'preact/hooks'
-import { useRouter } from 'wouter/preact'
 import { html } from 'htm/preact'
+import { useState, useEffect } from 'preact/hooks'
+import { useRouter } from 'wouter-preact'
 
 export default function Repos() {
   const [repos, setRepos] = useState<any>([])

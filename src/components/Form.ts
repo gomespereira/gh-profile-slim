@@ -1,6 +1,6 @@
 import { html } from 'htm/preact'
 import { useState } from 'preact/hooks'
-import { useLocation, useRouter } from 'wouter/preact'
+import { useLocation, useRouter } from 'wouter-preact'
 
 export default function Form() {
   const [username, setUsername] = useState('')
