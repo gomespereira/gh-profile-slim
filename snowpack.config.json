@@ -1,5 +1,7 @@
 {
   "extends": "@snowpack/app-scripts-preact",
   "scripts": {},
-  "plugins": []
+  "plugins": [
+    "@snowpack/plugin-babel"
+  ]
 }

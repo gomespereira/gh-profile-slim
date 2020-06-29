@@ -7,10 +7,12 @@
     "lint": "prettier --check \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
-    "preact": "^10.4.1"
+    "preact": "^10.4.1",
+    "wouter": "^2.4.0"
   },
   "devDependencies": {
     "@snowpack/app-scripts-preact": "^1.4.0",
+    "@snowpack/plugin-babel": "^1.4.0",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/preact": "^1.0.2",
     "jest": "^25.4.0",
