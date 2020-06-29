@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import { html } from 'htm/preact'
 import { Switch, Route } from 'wouter/preact'
 
 import Home from '../pages/Home'
@@ -6,22 +6,22 @@ import About from '../pages/About'
 import Profile from '../pages/Profile'
 
 export default function Content() {
-  return (
+  return html`
     <main>
-      <Switch>
-        <Route
+      <${Switch}>
+        <${Route}
           path="/profile"
-          component={Profile}
+          component=${Profile}
         />
-        <Route
+        <${Route}
           path="/about"
-          component={About}
+          component=${About}
         />
-        <Route
+        <${Route}
           path="/"
-          component={Home}
+          component=${Home}
         />
-      </Switch>
+      <//>
     </main>
-  )
+  `
 }

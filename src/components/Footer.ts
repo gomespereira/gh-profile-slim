@@ -1,10 +1,10 @@
-import { h } from 'preact'
+import { html } from 'htm/preact'
 
 export default function Footer() {
-  return (
+  return html`
     <footer>
       <p>
-        Designed and coded by&nbsp;
+        Designed and coded by
         <a
           href="https://twitter.com/gomespereira"
           target="_blank"
@@ -14,5 +14,5 @@ export default function Footer() {
         </a>
       </p>
     </footer>
-  )
+  `
 }

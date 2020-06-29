@@ -1,22 +1,22 @@
-import { h } from 'preact'
+import { html } from 'htm/preact'
 import { useLocation, Link } from 'wouter/preact'
 
 export default function Navbar() {
   const [location] = useLocation()
 
-  return (
+  return html`
     <nav>
       <ul>
         <li>
-          {
+          ${
             location === '/'
-              ? <Link to="/about">About</Link>
+              ? html`<${Link} href="/about">About<//>`
               : location === '/profile'
-                ? <Link to="/">New Search</Link>
-              : <Link to="/">Home</Link>
+                ? html`<${Link} href="/">New Search<//>`
+                : html`<${Link} href="/">Home<//>`
           }
         </li>
       </ul>
     </nav>
-  )
+  `
 }

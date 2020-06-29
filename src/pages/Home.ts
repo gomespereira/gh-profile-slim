@@ -1,9 +1,9 @@
-import { h } from 'preact'
+import { html } from 'htm/preact'
 
 import Form from '../components/Form'
 
 export default function Home() {
-  return (
-    <Form />
-  )
+  return html`
+    <${Form} />
+  `
 }

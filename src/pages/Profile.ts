@@ -1,13 +1,13 @@
-import { h, Fragment } from 'preact'
+import { html } from 'htm/preact'
 
 import Info from '../components/Info'
 import Repos from '../components/Repos'
 
 export default function Profile() {
-  return (
-    <Fragment>
-      <Info />
-      <Repos />
-    </Fragment>
-  )
+  return html`
+    <div>
+      <${Info} />
+      <${Repos} />
+    </div>
+  `
 }

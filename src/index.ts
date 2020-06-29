@@ -1,11 +1,12 @@
-import { h, render } from 'preact'
+import { render } from 'preact'
+import { html } from 'htm/preact'
 import 'preact/devtools'
 
 import './index.css'
 
 import App from './App'
 
-render(
-  <App />,
+render(html`
+  <${App} />`,
   document.getElementById('root')
 )

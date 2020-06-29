@@ -1,9 +1,9 @@
-import { h } from 'preact'
+import { html } from 'htm/preact'
 
 export default function Repos() {
-  return (
+  return html`
     <section>
       <div>Repos</div>
     </section>
-  )
+  `
 }

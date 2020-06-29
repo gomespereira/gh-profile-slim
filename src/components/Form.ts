@@ -1,4 +1,4 @@
-import { h } from 'preact'
+import { html } from 'htm/preact'
 import { useState } from 'preact/hooks'
 import { useLocation } from 'wouter/preact'
 
@@ -15,15 +15,15 @@ export default function Form() {
     setLocation('/profile')
   }
 
-  return (
-    <form onSubmit={handleSubmit}>
+  return html`
+    <form onSubmit=${handleSubmit}>
       <label htmlFor="username">github.com/</label>
       <input
         id="username"
         type="text"
-        placeholder={'Press "/" to focus'}
-        onChange={handleChange}
+        placeholder=${'Press "/" to focus'}
+        onChange=${handleChange}
       />
     </form>
-  )
+  `
 }
