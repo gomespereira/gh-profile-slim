@@ -1,15 +1,9 @@
 module.exports = {
-  purge: [
-    './src/components/**/*.ts',
-    './src/pages/**/*.ts',
-    './public/**/*.html',
-  ],
-  theme: {
-    fontFamily: {
-      'mono': ['"DM Mono"']
-    },
-    extend: {},
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.ts']
   },
+  theme: {},
   variants: {},
   plugins: [],
 }

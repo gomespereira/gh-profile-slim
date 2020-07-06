@@ -7,7 +7,7 @@ import Profile from '../pages/Profile'
 
 export default function Content() {
   return html`
-    <main class="flex flex-col flex-auto justify-center items-center m-4">
+    <main class="flex flex-col flex-auto justify-center items-center mt-4 mr-4 mb-10 ml-4 md:mr-10 md:ml-10 space-y-10">
       <${Switch}>
         <${Route}
           path="/profile"
