@@ -10,7 +10,7 @@ export default function Content() {
     <main class="flex flex-col flex-auto justify-center items-center mt-4 mr-4 mb-10 ml-4 md:mr-10 md:ml-10 space-y-10">
       <${Switch}>
         <${Route}
-          path="/profile"
+          path="/profile/:user"
           component=${Profile}
         />
         <${Route}
