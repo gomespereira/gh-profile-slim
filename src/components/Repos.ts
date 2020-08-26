@@ -3,7 +3,7 @@ import { useState, useEffect } from 'preact/hooks'
 import { useRoute } from 'wouter-preact'
 
 export default function Repos() {
-  const [repos, setRepos] = useState<any>([])
+  const [repos, setRepos] = useState([])
   const [, params] = useRoute('/profile/:user')
   const username = params.user
 
@@ -24,7 +24,7 @@ export default function Repos() {
       <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4">
         ${repos.map((repo: any) => html`
           <div
-            class="flex flex-col space-y-2 p-6 bg-blue-100 rounded-md"
+            class="flex flex-col space-y-2 p-6 bg-white border-2 border-blue-900 rounded-md"
             key=${repo.id}
           >
             <div class="flex justify-end">
@@ -47,11 +47,11 @@ export default function Repos() {
             </div>
             <div class="flex items-center space-x-3">
               <svg
-                class="w-5"
+                class="w-5 text-blue-900"
                 viewBox="0 0 16 16"
               >
                 <path
-                  fill-rule="evenodd"
+                  fill="currentColor"
                   d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3h-6.5a.25.25 0 01-.2-.1l-.9-1.2c-.33-.44-.85-.7-1.4-.7h-3.5z"
                 />
               </svg>

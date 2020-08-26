@@ -2,13 +2,14 @@ import { html } from 'htm/preact'
 import { useState, useEffect } from 'preact/hooks'
 import { useRoute } from 'wouter-preact'
 
-import { formatter } from '../utils/utils'
+import { formatDate, formatNumber } from '../utils/utils'
 
 export default function Info() {
-  const [info, setInfo] = useState<any>({})
+  const [info, setInfo] = useState({})
   const [, params] = useRoute('/profile/:user')
   const username = params.user
-  const formattedDate = formatter(info.created_at)
+  const formattedDate = formatDate(info.created_at)
+  const formattedNumber = formatNumber(info.followers)
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`, {
@@ -84,12 +85,12 @@ export default function Info() {
             <a
               class="font-bold hover:text-blue-900"
               href=${html`https://github.com/${info.login}?tab=followers`}
-              target="__blank"
+              target="_blank"
               rel="noopener noreferrer"
             >
               ${
                 info.followers >= 1000
-                  ? html`${(info.followers / 1000).toFixed(1)}k`
+                  ? formattedNumber
                   : info.followers
               }
             </a>
@@ -97,7 +98,7 @@ export default function Info() {
             <a
               class="font-bold hover:text-blue-900"
               href=${html`https://github.com/${info.login}?tab=following`}
-              target="__blank"
+              target="_blank"
               rel="noopener noreferrer"
             >
               ${info.following}

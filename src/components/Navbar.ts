@@ -2,7 +2,7 @@ import { html } from 'htm/preact'
 import { useLocation, Link } from 'wouter-preact'
 
 export default function Navbar() {
-  const [location] = useLocation()
+  const [location, ] = useLocation()
 
   return html`
     <nav class="mt-4 mr-2 ml-2 md:mt-8 md:mr-10 md:ml-10">

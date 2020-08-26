@@ -12,22 +12,22 @@
   },
   "dependencies": {
     "htm": "^3.0.4",
-    "preact": "^10.4.1",
-    "wouter-preact": "^2.4.0"
+    "preact": "^10.4.8",
+    "wouter-preact": "^2.5.1"
   },
   "devDependencies": {
-    "@snowpack/app-scripts-preact": "^1.4.0",
-    "@snowpack/plugin-babel": "^1.4.0",
-    "@snowpack/plugin-dotenv": "^1.1.1",
-    "@snowpack/plugin-webpack": "^1.4.0",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/preact": "^1.0.2",
-    "jest": "^25.4.0",
+    "@snowpack/app-scripts-preact": "^1.8.5",
+    "@snowpack/plugin-babel": "^2.1.0",
+    "@snowpack/plugin-dotenv": "^2.0.1",
+    "@snowpack/plugin-webpack": "^2.0.5",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/preact": "^2.0.0",
+    "jest": "^26.4.2",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.0.0",
-    "snowpack": "^2.5.0",
-    "tailwindcss": "^1.4.6"
+    "prettier": "^2.1.1",
+    "snowpack": "^2.9.0",
+    "tailwindcss": "^1.7.5"
   }
 }
