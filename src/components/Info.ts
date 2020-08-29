@@ -4,8 +4,19 @@ import { useRoute } from 'wouter-preact'
 
 import { formatDate, formatNumber } from '../utils/utils'
 
+interface Info {
+  avatar_url: string,
+  created_at: string,
+  followers: number,
+  following: number,
+  html_url: string,
+  login: string,
+  location: string,
+  name: string,
+}
+
 export default function Info() {
-  const [info, setInfo] = useState({})
+  const [info, setInfo] = useState(<Info>{})
   const [, params] = useRoute('/profile/:user')
   const username = params.user
   const formattedDate = formatDate(info.created_at)

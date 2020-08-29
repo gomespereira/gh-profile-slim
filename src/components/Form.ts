@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'preact/hooks'
 import { useLocation } from 'wouter-preact'
 
 export default function Form() {
-  const inputElement = useRef(null)
+  const inputElement = useRef<HTMLInputElement>(null)
   const [username, setUsername] = useState('')
   const [, setLocation] = useLocation()
 
@@ -11,9 +11,9 @@ export default function Form() {
     document.onkeyup = handleKeyUp
   })
 
-  function handleKeyUp(event: any): void {
-    if (event.keyCode === 191) inputElement.current.focus()
-    if (event.keyCode === 27) inputElement.current.blur()
+  function handleKeyUp(event: KeyboardEvent): void {
+    if (event.code === 'Slash') inputElement.current.focus()
+    if (event.code === 'Escape') inputElement.current.blur()
   }
 
   function handleChange(event: any): void {
