@@ -2,8 +2,17 @@ import { html } from 'htm/preact'
 import { useState, useEffect } from 'preact/hooks'
 import { useRoute } from 'wouter-preact'
 
+interface Repo {
+  description: string,
+  forks_count: string
+  html_url: string,
+  language: string,
+  name: string,
+  stargazers_count: number,
+}
+
 export default function Repos() {
-  const [repos, setRepos] = useState([])
+  const [repos, setRepos] = useState(<Array<Repo>>[])
   const [, params] = useRoute('/profile/:user')
   const username = params.user
 
